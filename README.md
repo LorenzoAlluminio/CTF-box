@@ -14,7 +14,7 @@ docker build . -t "ctfbox:latest"
 docker run -it ctfbox
 ```
 
-- to configure the powerlevel10k theme
+- to reconfigure the powerlevel10k theme if the default configuration is not ok
 ```
 p10k configure
 ```

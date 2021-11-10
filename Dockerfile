@@ -20,7 +20,10 @@ RUN wget https://bootstrap.pypa.io/pip/2.7/get-pip.py
 RUN python2 get-pip.py
 RUN pip3 install virtualenv virtualenvwrapper
 RUN pip3 install ipython ipdb
+RUN pip3 install pwntools
 RUN python2 -m pip install ipython
 RUN git clone --bare https://github.com/LorenzoAlluminio/dotfiles.git $HOME/.dotfiles
 RUN /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout -f CTF-box
 RUN rm get-pip.py
+COPY .p10k.zsh /root/.p10k.zsh
+CMD tmux
